@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../public/javascripts/angular/angular.min.js"></script>
+    <script src="directive.js"></script>
+</head>
+<body>
+<div style="width:200px;height:200px;border:1px solid red"></div>
+<button type="button">按钮</button>
+</body>
+<script>
+//    angular的本质
+    var url=localhost.href;
+    if(url.indexOf("#")>-1){
+        var ajaxurl=url.slice(url.indexOf("#")+1);
+        var xmlobj=new XMLHttpRequest();
+        xmlobj.onload=function(){
+            document.querySelector("div").innerHTML=xmlobj.response;
+        }
+        xmlobj.open("get","ajaxurl");
+        xmlobj.send();
+    }else{
+
+    }
+    document.querySelector("button").onclick=function(){
+        var newurl=url+"demo1.html";
+        location.href=newurl;
+        var xmlobj=new XMLHttpRequest();
+        xmlobj.onload=function(){
+            document.querySelector("div").innerHTML=xmlobj.response;
+        }
+        xmlobj.open("get","demo1.html");
+        xmlobj.send();
+    }
+</script>
+</html>

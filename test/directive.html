@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../public/javascripts/angular/angular.min.js"></script>
+    <script src="directive.js"></script>
+    <!--
+angular.module()
+.config()  .run()  .controller()  .filter()   .directive()
+.factory()
+-->
+    <!--
+    ajax   在地址栏里面留不下任何记录   //对搜素引擎不友好
+    -->
+</head>
+<body ng-app="myapp">
+<!--组件 react-->
+<div ng-cortroller="ctrl">
+    <div menu></div>
+</div>
+<hr>
+<div menu></div>
+<hr>
+<div abc></div>
+<hr>
+<div menu></div>
+
+
+</body>
+<script>
+    //ajax 1.向服务器发起请求  2.不能跨域  1.jsonp
+    angular.module("myapp",["directives"])
+
+</script>
+</html>
